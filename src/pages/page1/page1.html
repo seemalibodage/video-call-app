@@ -1,0 +1,31 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+	<!-- <ion-card>
+		<ion-card-content>
+			<video id="my-video" muted="true" autoplay></video>
+			<video id="other-video" autoplay></video>
+		</ion-card-content>
+	</ion-card> -->
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12 col-md-6><video id="my-video" muted="true" autoplay></video></ion-col>
+			<ion-col col-12 col-md-6><video id="other-video" autoplay></video></ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-list>
+		<ion-item (click)="chooseOtherUser()">
+			<ion-label>{{getOtherUserName()}}</ion-label>
+		</ion-item>
+	</ion-list>
+	<button ion-button block (click)="startCall()">Call</button>
+	<button ion-button block (click)="stopCall()">Drop</button>
+</ion-content>
